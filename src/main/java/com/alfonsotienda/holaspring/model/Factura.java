@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 
 /**
@@ -19,6 +20,11 @@ public class Factura {
     private String fecha;
 
     private Double total;
+
+
+    @ManyToOne
+    private Cliente cliente;
+
 
     public Integer getId() {
         return id;
